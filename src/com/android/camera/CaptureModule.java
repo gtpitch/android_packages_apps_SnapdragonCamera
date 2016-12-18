@@ -2170,6 +2170,11 @@ public class CaptureModule implements CameraModule, PhotoController,
     }
 
     @Override
+    public boolean delayAppExitToSaveImage() {
+        return false;
+    }
+
+    @Override
     public void onPreviewUIReady() {
         if (mPaused || mIsRecordingVideo) {
             return;
